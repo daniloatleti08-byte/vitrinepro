@@ -5,8 +5,8 @@
   3. O site preserva automaticamente UTMs e fbclid ao abrir o checkout.
 */
 window.SITE_CONFIG = {
-  metaPixelId: "931435424509099",
-  checkoutUrl: "https://pay.cakto.com.br/ppk4g3k_1040851",
+  metaPixelId: "",
+  checkoutUrl: "",
   productName: "Kit Vitrine Beauty Pro",
   productValue: 37,
   currency: "BRL"
