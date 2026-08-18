@@ -371,3 +371,155 @@ button { font: inherit; }
   .mobile-sticky.hidden { transform:translateY(120%); }
   .mobile-sticky .cta { width:100%; min-height:52px; font-size:14px; }
 }
+
+/* V3 — vitrine de modelos reais */
+.section-title em { color:var(--plum); font-style:italic; }
+.showcase-grid {
+  margin-top:52px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  align-items:start;
+  text-align:left;
+}
+.showcase-card {
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:30px;
+  background:#fff;
+  box-shadow:0 18px 50px rgba(63,28,48,.08);
+}
+.showcase-card.featured { transform:translateY(-12px); box-shadow:0 26px 68px rgba(63,28,48,.14); }
+.showcase-media {
+  position:relative;
+  aspect-ratio:9/14.5;
+  overflow:hidden;
+  background:#eee8e4;
+}
+.showcase-media video {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+}
+.showcase-chip {
+  position:absolute;
+  top:16px;
+  left:16px;
+  z-index:2;
+  display:inline-flex;
+  padding:8px 11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.92);
+  color:var(--ink);
+  border:1px solid rgba(255,255,255,.7);
+  backdrop-filter:blur(8px);
+  font-size:11px;
+  font-weight:850;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+}
+.video-play {
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:3;
+  transform:translate(-50%,-50%);
+  width:56px;
+  height:56px;
+  border:0;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  padding-left:4px;
+  background:rgba(35,23,31,.84);
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  transition:.2s ease;
+}
+.video-play:hover { transform:translate(-50%,-50%) scale(1.06); }
+.showcase-media.playing .video-play { opacity:0; pointer-events:none; }
+.showcase-copy { padding:26px 25px 28px; }
+.style-kicker {
+  display:block;
+  margin-bottom:10px;
+  color:var(--plum);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+.showcase-copy h3 {
+  margin-bottom:11px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:30px;
+  line-height:1.03;
+  font-weight:500;
+}
+.showcase-copy p { margin:0; color:var(--muted); font-size:14px; }
+.dark-card { background:#241a1e; border-color:rgba(35,23,31,.28); }
+.dark-card .showcase-copy h3 { color:#fff; }
+.dark-card .showcase-copy p { color:rgba(255,255,255,.64); }
+.dark-card .style-kicker { color:var(--champagne); }
+.kit-summary {
+  margin-top:44px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:38px;
+  align-items:center;
+  padding:38px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#f6ece7,#fff 62%);
+  border:1px solid var(--line);
+  text-align:left;
+}
+.kit-summary-main h3 {
+  margin:0 0 12px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:38px;
+  line-height:1.02;
+  font-weight:500;
+}
+.kit-summary-main p { margin:0; color:var(--muted); }
+.kit-summary-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.kit-summary-list div {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  border-radius:16px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.kit-summary-list span {
+  flex:0 0 32px;
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:rgba(109,45,79,.09);
+  color:var(--plum);
+  font-size:11px;
+  font-weight:900;
+}
+.kit-summary-list strong { font-size:13px; }
+
+@media (max-width:960px) {
+  .showcase-grid { grid-template-columns:1fr; max-width:620px; margin-left:auto; margin-right:auto; }
+  .showcase-card.featured { transform:none; }
+  .showcase-media { aspect-ratio:9/12.5; }
+  .kit-summary { grid-template-columns:1fr; text-align:center; }
+  .kit-summary-main .eyebrow { justify-content:center; }
+}
+
+@media (max-width:640px) {
+  .showcase-grid { margin-top:38px; gap:18px; }
+  .showcase-card { border-radius:24px; }
+  .showcase-media { aspect-ratio:9/13.5; }
+  .showcase-copy { padding:22px 20px 24px; }
+  .showcase-copy h3 { font-size:28px; }
+  .kit-summary { margin-top:30px; padding:25px 18px; border-radius:24px; }
+  .kit-summary-main h3 { font-size:34px; }
+  .kit-summary-list { grid-template-columns:1fr; text-align:left; }
+}
