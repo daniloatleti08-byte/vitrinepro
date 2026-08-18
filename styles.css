@@ -523,3 +523,8 @@ button { font: inherit; }
   .kit-summary-main h3 { font-size:34px; }
   .kit-summary-list { grid-template-columns:1fr; text-align:left; }
 }
+
+/* V4 — alvo exato dos botões-âncora. Compensa o cabeçalho fixo ao rolar. */
+#preco {
+  scroll-margin-top: 110px;
+}

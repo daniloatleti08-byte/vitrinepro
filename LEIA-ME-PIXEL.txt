@@ -1,0 +1,19 @@
+META PIXEL — INSTALAÇÃO RÁPIDA
+
+1. Abra o arquivo pixel.js.
+2. Procure esta linha:
+   const META_PIXEL_ID = 'COLE_SEU_PIXEL_ID_AQUI';
+3. Troque somente COLE_SEU_PIXEL_ID_AQUI pelo ID numérico do seu Pixel da Meta.
+4. Salve e publique novamente no GitHub/Vercel.
+
+O site já carrega pixel.js automaticamente.
+
+Eventos configurados na página:
+- PageView: abertura da página.
+- ViewContent: visualização da oferta Vitrine Beauty Pro.
+- InitiateCheckout: clique somente nos botões que levam ao checkout.
+
+IMPORTANTE SOBRE O BOTÃO-ÂNCORA:
+O botão principal do topo NÃO abre o checkout e NÃO dispara InitiateCheckout.
+Ele rola suavemente até o bloco do preço de R$ 37.
+O botão "Quero receber agora" dentro desse bloco é o botão que abre o checkout da Cakto.
