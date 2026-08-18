@@ -10,7 +10,7 @@
  * const META_PIXEL_ID = '123456789012345';
  */
 (function () {
-  const META_PIXEL_ID = 'COLE_SEU_PIXEL_ID_AQUI';
+  const META_PIXEL_ID = '1684026826038026';
 
   // Não carrega o Pixel enquanto o ID não tiver sido configurado.
   if (!/^\d+$/.test(META_PIXEL_ID)) {
