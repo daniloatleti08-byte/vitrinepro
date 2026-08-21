@@ -1,19 +1,30 @@
-META PIXEL — INSTALAÇÃO RÁPIDA
+META PIXEL — VITRINE BEAUTY PRO V5
 
-1. Abra o arquivo pixel.js.
-2. Procure esta linha:
+CONFIGURAÇÃO DA V5
+
+O Pixel já está instalado na Cakto. Por isso, esta versão separa corretamente as etapas do funil:
+
+NO SITE VITRINE:
+- PageView: abertura da página.
+- ViewContent: visualização da oferta.
+- CheckoutClick: evento personalizado disparado quando a pessoa clica em um botão que realmente abre a Cakto.
+
+NA CAKTO:
+- InitiateCheckout: deixe a Cakto registrar quando o checkout realmente abrir.
+- Purchase: deixe a Cakto registrar quando a compra for confirmada.
+
+Isso evita duplicar InitiateCheckout.
+
+INSTALAÇÃO DO PIXEL NO SITE
+1. Abra pixel.js.
+2. Procure:
    const META_PIXEL_ID = 'COLE_SEU_PIXEL_ID_AQUI';
-3. Troque somente COLE_SEU_PIXEL_ID_AQUI pelo ID numérico do seu Pixel da Meta.
+3. Troque somente COLE_SEU_PIXEL_ID_AQUI pelo mesmo ID numérico do Pixel usado na Cakto.
 4. Salve e publique novamente no GitHub/Vercel.
 
-O site já carrega pixel.js automaticamente.
+BOTÕES
+- O CTA principal do topo é uma ÂNCORA. Ele apenas rola até o preço e não registra CheckoutClick.
+- Os botões com data-checkout abrem a Cakto e registram CheckoutClick.
 
-Eventos configurados na página:
-- PageView: abertura da página.
-- ViewContent: visualização da oferta Vitrine Beauty Pro.
-- InitiateCheckout: clique somente nos botões que levam ao checkout.
-
-IMPORTANTE SOBRE O BOTÃO-ÂNCORA:
-O botão principal do topo NÃO abre o checkout e NÃO dispara InitiateCheckout.
-Ele rola suavemente até o bloco do preço de R$ 37.
-O botão "Quero receber agora" dentro desse bloco é o botão que abre o checkout da Cakto.
+LEITURA DO FUNIL
+ViewContent -> CheckoutClick -> InitiateCheckout (Cakto) -> Purchase (Cakto)

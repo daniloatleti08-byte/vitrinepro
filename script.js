@@ -30,14 +30,6 @@
     });
   });
 
-  const sticky = document.querySelector('.mobile-sticky');
-  const offer = document.querySelector('#oferta');
-  if (sticky && offer && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(([entry]) => {
-      sticky.classList.toggle('hidden', entry.isIntersecting);
-    }, { threshold: 0.12 });
-    observer.observe(offer);
-  }
 })();
 
 // V5 — carrega os vídeos da vitrine somente quando entram na tela.
