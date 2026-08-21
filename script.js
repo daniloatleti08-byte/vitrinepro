@@ -40,7 +40,7 @@
   }
 })();
 
-// V3 — carrega os vídeos da vitrine somente quando entram na tela.
+// V5 — carrega os vídeos da vitrine somente quando entram na tela.
 (function () {
   const videos = Array.from(document.querySelectorAll('[data-lazy-video]'));
   if (!videos.length) return;
